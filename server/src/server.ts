@@ -5,8 +5,6 @@ import cors from "@fastify/cors";
 const server = fastify({ logger: true });
 server.register(cors);
 
-server.register(require("@fastify/formbody"));
-
 server.get("/cards", async (req: FastifyRequest, reply: FastifyReply) => {
   const cards = await prisma.card.findMany();
   reply.send(cards);
