@@ -17,6 +17,7 @@ model Card {
   name      String
   value     Float
   status    Boolean
+  sector    String
 
   @@map("cards")
 }

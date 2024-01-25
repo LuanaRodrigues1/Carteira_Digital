@@ -16,6 +16,7 @@ server.post("/cards", async (req: FastifyRequest, reply: FastifyReply) => {
       name: req.body.name,
       value: req.body.value,
       status: req.body.status,
+      sector: req.body.sector,
     },
   });
   reply.send({ message: "Card criado" });
